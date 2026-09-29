@@ -1,6 +1,6 @@
 # Web Technologies
 
-## Student
+##  Lubomier
 
 ПІБ: Островський Любомир Олегович
 
