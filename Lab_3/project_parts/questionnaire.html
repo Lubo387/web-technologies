@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 4</title>
+</head>
+<body>
+
+    <div>
+        <h1>Заявка на посаду Junior Developer</h1>
+
+        <form action="questionnaire.html" method="get" enctype="multipart/form-data">
+
+            <fieldset>
+                <legend>Особиста інформація</legend>
+
+                <p>
+                    <label for="fullname">ПІБ кандидата:</label><br>
+                    <input type="text" id="fullname" name="fullname" placeholder="Шевченко Тарас Григорович" required tabindex="1">
+                </p>
+
+                <p>
+                    <label for="pass">Пароль для особистого кабінету:</label><br>
+                    <input type="password" id="pass" name="password" placeholder="Введіть пароль" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6}" title="Пароль має містити 6 символів, принаймні одну велику літеру, малу літеру та цифру" tabindex="2">
+                </p>
+
+                <p>
+                    <label for="email">Електронна пошта:</label><br>
+                    <input type="email" id="email" name="email" placeholder="candidate@example.com" autocomplete="off" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Введіть коректну e-mail адресу" tabindex="3">
+                </p>
+
+                <p>
+                    <label for="phone">Номер телефону:</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="+380991234567" required pattern="^\+380\d{9}$" title="Формат: +380XXXXXXXXX" tabindex="4">
+                </p>
+
+                <p>
+                    <label for="birthdate">Дата народження:</label><br>
+                    <input type="date" id="birthdate" name="birthdate" required tabindex="5">
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Умови роботи та навички</legend>
+
+                <p>
+                    <label>Бажаний формат роботи:</label><br>
+                    <label><input type="radio" name="work_format" value="office" tabindex="6"> Офіс</label>
+                    <label><input type="radio" name="work_format" value="remote" tabindex="7"> Віддалено</label>
+                    <label><input type="radio" name="work_format" value="hybrid" tabindex="8"> Гібридний</label>
+                </p>
+
+                <p>
+                    <label>Рівень англійської мови:</label><br>
+                    <label><input type="radio" name="english" value="beginner" tabindex="9"> Elementary (A1/A2)</label>
+                    <label><input type="radio" name="english" value="intermediate" checked tabindex="10"> Intermediate (B1/B2)</label>
+                    <label><input type="radio" name="english" value="advanced" tabindex="11"> Advanced (C1/C2)</label>
+                </p>
+
+                <p>
+                    <label>Основні технології, якими володієте:</label><br>
+                    <label><input type="checkbox" name="tech" value="html_css" tabindex="12"> HTML5 / CSS3</label>
+                    <label><input type="checkbox" name="tech" value="js" tabindex="13"> JavaScript</label>
+                    <label><input type="checkbox" name="tech" value="react" tabindex="14"> React / Vue</label>
+                    <label><input type="checkbox" name="tech" value="sql" tabindex="15"> Git / SQL</label>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Деталі вакансії</legend>
+
+                <p>
+                    <label for="experience">Досвід роботи в IT:</label><br>
+                    <select id="experience" name="experience" tabindex="16">
+                        <option value="none">Без досвіду</option>
+                        <option value="less_1">До 1 року</option>
+                        <option value="1_2" selected>Від 1 до 2 років</option>
+                        <option value="2_5">Від 2 до 5 років</option>
+                        <option value="more_5">Понад 5 років</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="priorities">Що для вас важливо в компанії (можна обрати декілька):</label><br>
+                    <select id="priorities" name="priorities" multiple size="4" tabindex="17">
+                        <option value="salary">Висока зарплата</option>
+                        <option value="team">Дружній колектив</option>
+                        <option value="growth">Кар'єрне зростання</option>
+                        <option value="projects">Цікаві проєкти</option>
+                        <option value="flexible">Гнучкий графік</option>
+                        <option value="education">Оплата курсів та навчання</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="position">Бажана напрямність та посада:</label><br>
+                    <select id="position" name="position" tabindex="18">
+                        <optgroup label="Web Development">
+                            <option value="frontend">Frontend Developer</option>
+                            <option value="backend">Backend Developer</option>
+                            <option value="fullstack">Fullstack Developer</option>
+                        </optgroup>
+                        <optgroup label="Mobile Development">
+                            <option value="android">Android Developer</option>
+                            <option value="ios">iOS Developer</option>
+                            <option value="flutter">Flutter Developer</option>
+                        </optgroup>
+                        <optgroup label="Testing & QA">
+                            <option value="qa_manual">Manual QA Engineer</option>
+                            <option value="qa_auto">QA Automation Engineer</option>
+                            <option value="qa_lead">QA Tech Lead</option>
+                        </optgroup>
+                        <optgroup label="Design & Management">
+                            <option value="ui_ux">UI/UX Designer</option>
+                            <option value="pm">Project Manager</option>
+                            <option value="ba">Business Analyst</option>
+                        </optgroup>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="city">Місто проживання:</label><br>
+                    <input type="text" id="city" name="city" list="city-list" placeholder="Оберіть або введіть місто" tabindex="19">
+                    <datalist id="city-list">
+                        <option value="Київ">
+                        <option value="Львів">
+                        <option value="Чернівці">
+                        <option value="Одеса">
+                        <option value="Харків">
+                        <option value="Дніпро">
+                    </datalist>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Додаткові матеріали</legend>
+
+                <p>
+                    <label for="audio">Голосове самопрезентування (аудіофайли):</label><br>
+                    <input type="file" id="audio" name="audio[]" accept="audio/*" multiple tabindex="20">
+                </p>
+
+                <p>
+                    <label for="about">Розповідіть про ваші найкращі проєкти:</label><br>
+                    <textarea id="about" name="about" rows="4" cols="50" placeholder="Опишіть свій досвід або додайте посилання на GitHub..." tabindex="21"></textarea>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <p>
+                <input type="submit" value="Надіслати заявку" tabindex="22">
+                <input type="reset" value="Скинути форму" tabindex="23">
+            </p>
+
+        </form>
+
+        <hr>
+        <p><a href="../index.html">Повернутись на головну</a></p>
+    </div>
+
+</body>
+</html>
