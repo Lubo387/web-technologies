@@ -1,0 +1,49 @@
+﻿.recipe-title {
+    text-align: center;
+    color: red;
+    font-family: Arial, sans-serif;
+}
+
+.recipe-subtitle {
+    text-align: center;
+    font-style: italic;
+    font-family: Arial, sans-serif;
+}
+
+.recipe-text {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #000;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.mark {
+    background-color: yellow;
+}
+
+.recipe-line {
+    border: none;
+    height: 4px;
+    background-color: green;
+    width: 60%;
+    margin: 20px auto;
+}
+
+.recipe-footer {
+    text-align: center;
+    font-style: italic;
+    font-family: Arial, sans-serif;
+    color: #000;
+}

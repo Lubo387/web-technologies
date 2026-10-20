@@ -1,0 +1,27 @@
+﻿a {
+    color: purple;
+}
+
+    a.main-menu {
+        color: green;
+    }
+
+ul.berries-list {
+    list-style-type: square;
+}
+
+ul.vegetables-list {
+    list-style-type: circle;
+}
+
+ul li ul {
+    list-style-type: none;
+}
+
+ul.berries-list a {
+    text-decoration: none;
+}
+
+ol {
+    list-style-position: inside;
+}
