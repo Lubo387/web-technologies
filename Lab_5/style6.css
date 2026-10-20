@@ -1,0 +1,107 @@
+﻿body {
+    background-color: #1b2a41;
+    background-image: url('img/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    box-sizing: border-box;
+    max-width: 900px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.div-tag {
+    display: inline;
+    width: 200px;
+    height: 100px;
+    background-color: #b2dfdb;
+    border: 1px solid #00897b;
+    margin-right: 5px;
+}
+
+.span-tag {
+    display: block;
+    width: 150px;
+    background-color: #e0f2f1;
+    border: 1px solid #00897b;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.repeat-box {
+    height: 200px;
+    border: 2px solid #00897b;
+    margin-bottom: 15px;
+    background-image: url('icons/ticket.png');
+    background-color: #ffffff;
+}
+
+.rep-x {
+    background-repeat: repeat-x;
+}
+
+.rep-y {
+    background-repeat: repeat-y;
+}
+
+.rep-space {
+    background-repeat: space;
+}
+
+.rep-round {
+    background-repeat: round;
+}
+
+.size-box {
+    width: 300px;
+    height: 200px;
+    border: 2px solid #00897b;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    background-image: url('icons/ticket.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+}
+
+.bg-contain {
+    background-size: contain;
+}
+
+.bg-cover {
+    background-size: cover;
+}
+
+.scroll-box {
+    max-height: 150px;
+    overflow: auto;
+    border: 2px solid #00897b;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-image: url('icons/ticket.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff;
+}
+
+.att-scroll {
+    background-attachment: scroll;
+}
+
+.att-local {
+    background-attachment: local;
+}

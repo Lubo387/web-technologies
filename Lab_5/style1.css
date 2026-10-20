@@ -1,0 +1,95 @@
+﻿.content-box {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.list-level-1 {
+    background-color: rgb(103, 158, 128);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.list-level-2 {
+    background-color: rgb(153, 180, 102);
+    padding-left: 20px;
+}
+
+    .list-level-1 > li,
+    .list-level-2 li {
+        background-repeat: no-repeat;
+        background-position: left 10px;
+        background-size: 22px 22px;
+        padding-left: 35px;
+        margin-bottom: 10px;
+    }
+
+.item-prep {
+    background-image: url('icons/checklist.png');
+}
+
+.item-rest {
+    background-image: url('icons/checklist.png');
+}
+
+.item-route {
+    background-image: url('icons/choose-a-route.png');
+}
+
+.item-ticket {
+    background-image: url('icons/ticket.png');
+}
+
+.item-hotel {
+    background-image: url('icons/hotel.png');
+}
+
+.item-car {
+    background-image: url('icons/car.png');
+}
+
+.item-bar {
+    background-image: url('icons/bar.png');
+}
+
+.item-casino {
+    background-image: url('icons/casino.png');
+}
+
+.item-museum {
+    background-image: url('icons/museum.png');
+}
+
+.item-festival {
+    background-image: url('icons/festival.png');
+}
+
+span {
+    display: inline-block;
+    padding: 8px 15px;
+}
+
+.list-level-1 > li > span {
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(199, 124, 106);
+}
+
+.list-level-2 span {
+    font-size: 18px;
+    font-style: italic;
+    background-color: rgb(218, 106, 32);
+}
