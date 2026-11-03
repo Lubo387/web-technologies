@@ -1,0 +1,119 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 60px;
+    background-color: #e0e0e0;
+}
+
+.horiz-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0d47a1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+}
+
+    .horiz-nav > li {
+        position: relative;
+        float: left;
+    }
+
+        .horiz-nav > li.right-item {
+            float: right;
+        }
+
+    .horiz-nav a {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+        .horiz-nav a .material-icons {
+            margin-right: 8px;
+        }
+
+        .horiz-nav a:hover,
+        .horiz-nav a.active {
+            background-color: #1565c0;
+        }
+
+    .horiz-nav .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #0d47a1;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+        min-width: 150px;
+    }
+
+    .horiz-nav li:hover .dropdown {
+        display: block;
+    }
+
+    .horiz-nav .dropdown a {
+        padding: 10px 15px;
+    }
+
+        .horiz-nav .dropdown a:hover {
+            background-color: #1976d2;
+        }
+
+.vert-nav-container {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 250px;
+    height: calc(100% - 60px);
+    background-color: #0277bd;
+}
+
+.vert-nav, .vert-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .vert-nav a {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+        .vert-nav a .material-icons {
+            margin-right: 10px;
+        }
+
+        .vert-nav a:hover,
+        .vert-nav a.active {
+            background-color: #01579b;
+        }
+
+    .vert-nav ul {
+        display: none;
+        background-color: #014f86;
+    }
+
+    .vert-nav li:hover > ul {
+        display: block;
+    }
+
+    .vert-nav ul a {
+        padding-left: 35px;
+    }
+
+    .vert-nav ul ul a {
+        padding-left: 50px;
+    }
