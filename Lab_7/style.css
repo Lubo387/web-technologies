@@ -1,0 +1,112 @@
+﻿*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --card-bg: #ffffff;
+    --text-main: #333333;
+    --text-muted: #777777;
+    --accent-gradient: linear-gradient(135deg, #4a90e2, #357abd);
+    --border-color: rgb(0, 0, 0);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.weather-container {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+}
+
+.current-weather {
+    background: var(--accent-gradient);
+    color: #ffffff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.city-info h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.city-info .date {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.city-info .condition {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.main-weather-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.temp-info .temperature {
+    font-size: 64px;
+    font-weight: 300;
+}
+
+
+.details-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    opacity: 0.9;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+}
+
+.forecast-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+}
+
+.forecast-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+    .forecast-card:last-child {
+        border-bottom: none;
+    }
+
+    .forecast-card .day {
+        font-weight: 600;
+        font-size: 14px;
+        flex: 1;
+    }
+
+.forecast-card .forecast-temp {
+    font-size: 14px;
+    color: var(--text-muted);
+    text-align: right;
+    flex: 1;
+}
