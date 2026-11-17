@@ -1,0 +1,136 @@
+﻿*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --gap-grid: 20px;
+    --bg-card: #ffffff;
+    --border-card: #dcdcdc;
+    --btn-bg: #808080;
+    --btn-bg-hover: #666666;
+    --btn-text: #ffffff;
+    --text-main: #222222;
+    --text-muted: #444444;
+    --shadow-card: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: Calibri, sans-serif;
+    background-color: #ffffff;
+    color: var(--text-main);
+    padding: 20px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1.8fr repeat(3, minmax(0, 1fr));
+    gap: var(--gap-grid);
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-card);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.card--tall {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.card__img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.card--tall .card__img {
+    height: 280px;
+}
+
+.card__body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 12px;
+    padding: 18px;
+}
+
+.card--tall .card__body {
+    grid-template-rows: repeat(6, auto) 1fr;
+    align-items: start;
+}
+
+.card--tall .card__btn {
+    align-self: end;
+}
+
+.card__title {
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.card__subtitle {
+    font-size: 1.05rem;
+    margin-top: 5px;
+}
+
+.card__scheme {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card__text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--text-muted);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.card__btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+    .card__btn:hover {
+        background-color: var(--btn-bg-hover);
+    }
+
+@media screen and (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card--tall {
+        grid-column: 1 / 3;
+        grid-row: auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card--tall {
+        grid-column: 1 / 2;
+    }
+}
