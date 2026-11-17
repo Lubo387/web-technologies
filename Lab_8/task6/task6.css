@@ -1,0 +1,65 @@
+﻿*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --tree-bg: #f6d343;
+    --tree-text: #ffffff;
+    --tree-gap: 8px;
+}
+
+body {
+    font-family: Calibri, sans-serif;
+    padding: 20px;
+}
+
+.tree {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 65px);
+    gap: var(--tree-gap);
+    max-width: 1200px;
+    margin: 0 auto;
+    counter-reset: tree-num;
+}
+
+.tree__item {
+    background-color: var(--tree-bg);
+    color: var(--tree-text);
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 8px;
+}
+    .tree__item::before {
+        counter-increment: tree-num;
+        content: counter(tree-num);
+    }
+
+.row-1 {
+    grid-column: span 12;
+}
+
+.row-2 {
+    grid-column: span 6;
+}
+
+.row-3 {
+    grid-column: span 4;
+}
+
+.row-4 {
+    grid-column: span 3;
+}
+
+.row-5 {
+    grid-column: span 2;
+}
+
+.row-6 {
+    grid-column: span 1;
+}
